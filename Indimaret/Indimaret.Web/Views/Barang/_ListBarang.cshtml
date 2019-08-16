@@ -1,0 +1,114 @@
+﻿<div class="table table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Kode Barang</th>
+                <th>Nama Barang</th>
+                <th>Kota Asal</th>
+                <th>Jumlah Barang</th>
+          
+            </tr>
+        </thead>
+        <tbody id="idBodyTableListBarang">
+
+        </tbody>
+    </table>
+</div>
+
+<script>
+    $(document).ready(function () {
+        //debugger;
+        $.ajax({
+            url: '/Barang/GetAll',
+            method: 'Get',
+            success: function (mdl) {
+                var jahit;
+                $.each(mdl, function (index, data) {
+                    jahit += '<tr>'+
+                        '<td>' + data.KodeBarang + '</td>' +
+                        '<td>' + data.NamaBarang + '</td>' +
+                        '<td>'+ data.AsalPabrik+'</td>'+
+                        '<td>' + data.JumlahBarang + '</td>' +
+                        '<td>'+
+                           '<div class="dropdown">'+
+                               '<button class="btn btn-primary" id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">' +
+                                ' Action'+
+                                '  <span class="caret"></span>' +
+                                '</button>'+
+                                '<ul class="dropdown-menu" aria-labelledby="dLabel">' +
+                                    '<li><button class="classBtnEditBarang btn btn-default btn-lg btn-block" dataBarang=' + JSON.stringify(data) + '>Edit</button></li>' +
+                                    '<li><button class="classBtnDeleteBarang btn btn-default btn-lg btn-block" dataBarang=' + JSON.stringify(data) + '>Delete</button></li>' +
+                                '</ul>'+
+                            '</div>'+
+                        '</td>'+
+                        '</tr>';
+                });
+                $('#idBodyTableListBarang').html(jahit);
+
+
+                //dropdown edit click
+                $('.classBtnEditBarang').click(function () {
+
+                    var vDataBarang = JSON.parse($(this).attr('dataBarang'));
+                    var d = new Date(vDataBarang.CreatedDate.toString());
+                    var month = d.getMonth() + 1;
+                    var day = d.getDate();
+                    var year = d.getFullYear();
+                  
+                    $.ajax({
+                        url: '/Barang/EditBarang',
+                        method: 'Get',
+                        success: function (mdl) {
+                            $('#IdMdlBodyBarang').html(mdl);
+                            $('#ID').val(vDataBarang.ID);
+                            $('#idEditKodeBarang').val(vDataBarang.KodeBarang);
+                            $('#idEditNamaBarang').val(vDataBarang.NamaBarang);
+                            $('#idEditAsalPabrik').val(vDataBarang.AsalPabrik);
+                            $('#idEditJumlahBarang').val(vDataBarang.JumlahBarang);
+                            $('#idEditHargaBarang').val(vDataBarang.HargaBarang);
+                            $('#idEditIsDelete').val(vDataBarang.IsDelete);
+                            $('#idEditCreatedBy').val(vDataBarang.CreatedBy);
+                            $('#idEditCreatedDate').val(month + "-" + day + "-" + year);
+                            $('#idEditUpdateBy').val(vDataBarang.UpdateBy);
+                            $('#idEditUpdateDate').val(vDataBarang.UpdateDate);
+                           
+                        }
+                       
+                    });
+                    $('#IdMdlBarang').modal('show');
+                });
+
+                //dropdown delete click
+                $('.classBtnDeleteBarang').click(function () {
+                    debugger;
+                    var vDataBarang = JSON.parse($(this).attr('dataBarang'));
+                    $.ajax({
+                        url: '/Barang/DeleteBarang',
+                        method: 'Get',
+                        success: function (mdl) {
+                            $('#IdMdlBodyBarang').html(mdl);
+                            $('#ID').val(vDataBarang.ID);
+                            $('#idDeleteKodeBarang').val(vDataBarang.KodeBarang);
+                            $('#idDeleteNamaBarang').val(vDataBarang.NamaBarang);
+                            $('#idDeleteAsalPabrik').val(vDataBarang.AsalPabrik);
+                            $('#idDeleteJumlahBarang').val(vDataBarang.JumlahBarang);
+                            $('#idDeleteHargaBarang').val(vDataBarang.HargaBarang);
+                            $('#idDeleteIsDelete').val(vDataBarang.IsDelete);
+                            $('#idDeleteCreatedBy').val(vDataBarang.CreatedBy);
+                            $('#idDeleteCreatedDate').val(vDataBarang.CreatedDate);
+                            $('#idDeleteUpdateBy').val(vDataBarang.UpdateBy);
+                            $('#idDeleteUpdateDate').val(vDataBarang.UpdateDate);
+                        }
+
+                    });
+                    $('#IdMdlBarang').modal('show');
+                });
+
+               
+
+            }
+
+        });
+        
+    });
+</script>

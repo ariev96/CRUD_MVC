@@ -1,0 +1,77 @@
+﻿
+<h2>Delete Barang</h2>
+
+<form id="idFormDeleteBarang">
+    <div class="table-responsive">
+        <table class="table">
+            <tr>
+
+                <input id="ID" name="ID" hidden />
+            </tr>
+            <tr>
+                <td>Kode Barang</td>
+                <td><input id="idDeleteKodeBarang" class="form-control" name="KodeBarang" type="text" readonly /></td>
+            </tr>
+            <tr>
+                <td>Nama Barang</td>
+                <td><input id="idDeleteNamaBarang" class="form-control" name="NamaBarang" readonly/></td>
+            </tr>
+            <tr>
+                <td>Asal Pabrik</td>
+                <td><input id="idDeleteAsalPabrik" class="form-control" name="AsalPabrik" readonly/></td>
+            </tr>
+            <tr>
+                <td>Jumlah Barang</td>
+                <td><input id="idDeleteJumlahBarang" class="form-control" name="JumlahBarang" readonly/></td>
+            </tr>
+            <tr>
+                <td>Harga Barang</td>
+                <td><input id="idDeleteHargaBarang" class="form-control" name="HargaBarang" readonly/></td>
+            </tr>
+            <tr>
+                <td>Is Delete?</td>
+                <td><input id="idDeleteIsDelete" type="radio" name="IsDelete" value="false" /> Tidak <input type="radio" name="IsDelete" value="true" /> Ya </td>
+            </tr>
+            <tr>
+                <td>Created By</td>
+                <td><input type="text" name="CreatedBy" id="idDeleteCreatedBy" class="form-control" readonly /></td>
+            </tr>
+            <tr>
+                <td>Tanggal Di Terima</td>
+                <td><input type="text" name="CreatedDate" id="idDeleteCreatedDate" class="form-control" readonly /></td>
+            </tr>
+            <tr>
+                
+                <input type="text" name="UpdatedBy" id="idDeleteUpdateBy" hidden/>
+            </tr>
+            <tr>
+                @*<td>Tanggal Update</td>*@
+                <input type="date" name="UpdatedDate" id="idDeleteUpdateDate" hidden />
+            </tr>
+
+        </table>
+    </div>
+
+    <input type="submit" class="btn btn-success btn-default btn-lg" id="idBtnSubmitDeleteBarang"></input>
+</form>
+
+<script>
+    $('#idFormDeleteBarang').submit(function () {
+        debugger;
+        var vDataDeleteBarang = $('#idFormDeleteBarang').serialize();
+        $.ajax({
+            url:'/Barang/SaveEditBarang',
+            data:vDataDeleteBarang,
+            type:'post',
+            success: function (terserah) {
+                if (terserah.status == "Berhasil") {
+                    alert("data berhasil didelete");
+                }
+                else {
+                    alert("data gagal didelete");
+                }
+            }
+        });
+
+    });
+</script>

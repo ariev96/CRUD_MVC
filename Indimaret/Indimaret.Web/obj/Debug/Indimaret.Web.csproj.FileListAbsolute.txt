@@ -1,0 +1,168 @@
+D:\Batch205\Day17\Indimaret\Indimaret.Web\bin\ApplicationInsights.config
+D:\Batch205\Day17\Indimaret\Indimaret.Web\bin\roslyn\csc.exe
+D:\Batch205\Day17\Indimaret\Indimaret.Web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Batch205\Day17\Indimaret\Indimaret.Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Batch205\Day17\Indimaret\Indimaret.Web\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Batch205\Day17\Indimaret\Indimaret.Web\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Batch205\Day17\Indimaret\Indimaret.Web\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Batch205\Day17\Indimaret\Indimaret.Web\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Batch205\Day17\Indimaret\Indimaret.Web\bin\roslyn\System.Collections.Immutable.dll
+D:\Batch205\Day17\Indimaret\Indimaret.Web\bin\roslyn\System.Reflection.Metadata.dll
+D:\Batch205\Day17\Indimaret\Indimaret.Web\bin\roslyn\vbc.exe
+D:\Batch205\Day17\Indimaret\Indimaret.Web\bin\roslyn\VBCSCompiler.exe
+D:\Batch205\Day17\Indimaret\Indimaret.Web\bin\roslyn\VBCSCompiler.exe.config
+D:\Batch205\Day17\Indimaret\Indimaret.Web\bin\Indimaret.Web.dll.config
+D:\Batch205\Day17\Indimaret\Indimaret.Web\bin\Indimaret.Web.dll
+D:\Batch205\Day17\Indimaret\Indimaret.Web\bin\Indimaret.Web.pdb
+D:\Batch205\Day17\Indimaret\Indimaret.Web\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Batch205\Day17\Indimaret\Indimaret.Web\bin\Microsoft.AI.DependencyCollector.dll
+D:\Batch205\Day17\Indimaret\Indimaret.Web\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Batch205\Day17\Indimaret\Indimaret.Web\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Batch205\Day17\Indimaret\Indimaret.Web\bin\Microsoft.AI.Web.dll
+D:\Batch205\Day17\Indimaret\Indimaret.Web\bin\Microsoft.AI.WindowsServer.dll
+D:\Batch205\Day17\Indimaret\Indimaret.Web\bin\Microsoft.ApplicationInsights.dll
+D:\Batch205\Day17\Indimaret\Indimaret.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Batch205\Day17\Indimaret\Indimaret.Web\bin\Microsoft.Web.Infrastructure.dll
+D:\Batch205\Day17\Indimaret\Indimaret.Web\bin\System.Web.Helpers.dll
+D:\Batch205\Day17\Indimaret\Indimaret.Web\bin\System.Web.Mvc.dll
+D:\Batch205\Day17\Indimaret\Indimaret.Web\bin\System.Web.Razor.dll
+D:\Batch205\Day17\Indimaret\Indimaret.Web\bin\System.Web.Webpages.Deployment.dll
+D:\Batch205\Day17\Indimaret\Indimaret.Web\bin\System.Web.Webpages.dll
+D:\Batch205\Day17\Indimaret\Indimaret.Web\bin\System.Web.Webpages.Razor.dll
+D:\Batch205\Day17\Indimaret\Indimaret.Web\bin\Microsoft.AI.DependencyCollector.xml
+D:\Batch205\Day17\Indimaret\Indimaret.Web\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Batch205\Day17\Indimaret\Indimaret.Web\bin\Microsoft.AI.Web.xml
+D:\Batch205\Day17\Indimaret\Indimaret.Web\bin\Microsoft.AI.WindowsServer.xml
+D:\Batch205\Day17\Indimaret\Indimaret.Web\bin\Microsoft.ApplicationInsights.xml
+D:\Batch205\Day17\Indimaret\Indimaret.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Batch205\Day17\Indimaret\Indimaret.Web\bin\System.Web.Razor.xml
+D:\Batch205\Day17\Indimaret\Indimaret.Web\bin\System.Web.Webpages.xml
+D:\Batch205\Day17\Indimaret\Indimaret.Web\bin\System.Web.Webpages.Deployment.xml
+D:\Batch205\Day17\Indimaret\Indimaret.Web\bin\System.Web.Webpages.Razor.xml
+D:\Batch205\Day17\Indimaret\Indimaret.Web\bin\System.Web.Helpers.xml
+D:\Batch205\Day17\Indimaret\Indimaret.Web\bin\System.Web.Mvc.xml
+D:\Batch205\Day17\Indimaret\Indimaret.Web\obj\Debug\Indimaret.Web.csprojResolveAssemblyReference.cache
+D:\Batch205\Day17\Indimaret\Indimaret.Web\obj\Debug\Indimaret.Web.dll
+D:\Batch205\Day17\Indimaret\Indimaret.Web\obj\Debug\Indimaret.Web.pdb
+D:\Batch205\Day17\Indimaret\Indimaret.Web\bin\Indimaret.Models.dll
+D:\Batch205\Day17\Indimaret\Indimaret.Web\bin\Indimaret.Repositories.dll
+D:\Batch205\Day17\Indimaret\Indimaret.Web\bin\EntityFramework.dll
+D:\Batch205\Day17\Indimaret\Indimaret.Web\bin\Indimaret.Models.pdb
+D:\Batch205\Day17\Indimaret\Indimaret.Web\bin\Indimaret.Repositories.pdb
+D:\Batch205\Day17\Indimaret\Indimaret.Web\bin\EntityFramework.xml
+D:\Batch205\Day17\Indimaret\Indimaret.Web\bin\EntityFramework.SqlServer.dll
+D:\Batch205\Day17\Indimaret\Indimaret.Web\bin\EntityFramework.SqlServer.xml
+D:\Batch205\Day17\Indimaret\Indimaret.Web\bin\Indimaret.ViewModels.dll
+D:\Batch205\Day17\Indimaret\Indimaret.Web\bin\Indimaret.ViewModels.pdb
+H:\Batch205\Day21\Indimaret\Indimaret.Web\bin\ApplicationInsights.config
+H:\Batch205\Day21\Indimaret\Indimaret.Web\bin\roslyn\csc.exe
+H:\Batch205\Day21\Indimaret\Indimaret.Web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+H:\Batch205\Day21\Indimaret\Indimaret.Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+H:\Batch205\Day21\Indimaret\Indimaret.Web\bin\roslyn\Microsoft.CodeAnalysis.dll
+H:\Batch205\Day21\Indimaret\Indimaret.Web\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+H:\Batch205\Day21\Indimaret\Indimaret.Web\bin\roslyn\Microsoft.CSharp.Core.targets
+H:\Batch205\Day21\Indimaret\Indimaret.Web\bin\roslyn\Microsoft.VisualBasic.Core.targets
+H:\Batch205\Day21\Indimaret\Indimaret.Web\bin\roslyn\System.Collections.Immutable.dll
+H:\Batch205\Day21\Indimaret\Indimaret.Web\bin\roslyn\System.Reflection.Metadata.dll
+H:\Batch205\Day21\Indimaret\Indimaret.Web\bin\roslyn\vbc.exe
+H:\Batch205\Day21\Indimaret\Indimaret.Web\bin\roslyn\VBCSCompiler.exe
+H:\Batch205\Day21\Indimaret\Indimaret.Web\bin\roslyn\VBCSCompiler.exe.config
+H:\Batch205\Day21\Indimaret\Indimaret.Web\bin\Indimaret.Web.dll.config
+H:\Batch205\Day21\Indimaret\Indimaret.Web\bin\Indimaret.Web.dll
+H:\Batch205\Day21\Indimaret\Indimaret.Web\bin\Indimaret.Web.pdb
+H:\Batch205\Day21\Indimaret\Indimaret.Web\bin\EntityFramework.dll
+H:\Batch205\Day21\Indimaret\Indimaret.Web\bin\EntityFramework.SqlServer.dll
+H:\Batch205\Day21\Indimaret\Indimaret.Web\bin\Indimaret.Models.dll
+H:\Batch205\Day21\Indimaret\Indimaret.Web\bin\Indimaret.Repositories.dll
+H:\Batch205\Day21\Indimaret\Indimaret.Web\bin\Microsoft.AI.Agent.Intercept.dll
+H:\Batch205\Day21\Indimaret\Indimaret.Web\bin\Microsoft.AI.DependencyCollector.dll
+H:\Batch205\Day21\Indimaret\Indimaret.Web\bin\Microsoft.AI.PerfCounterCollector.dll
+H:\Batch205\Day21\Indimaret\Indimaret.Web\bin\Microsoft.AI.ServerTelemetryChannel.dll
+H:\Batch205\Day21\Indimaret\Indimaret.Web\bin\Microsoft.AI.Web.dll
+H:\Batch205\Day21\Indimaret\Indimaret.Web\bin\Microsoft.AI.WindowsServer.dll
+H:\Batch205\Day21\Indimaret\Indimaret.Web\bin\Microsoft.ApplicationInsights.dll
+H:\Batch205\Day21\Indimaret\Indimaret.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+H:\Batch205\Day21\Indimaret\Indimaret.Web\bin\Microsoft.Web.Infrastructure.dll
+H:\Batch205\Day21\Indimaret\Indimaret.Web\bin\System.Web.Helpers.dll
+H:\Batch205\Day21\Indimaret\Indimaret.Web\bin\System.Web.Mvc.dll
+H:\Batch205\Day21\Indimaret\Indimaret.Web\bin\System.Web.Razor.dll
+H:\Batch205\Day21\Indimaret\Indimaret.Web\bin\System.Web.Webpages.Deployment.dll
+H:\Batch205\Day21\Indimaret\Indimaret.Web\bin\System.Web.Webpages.dll
+H:\Batch205\Day21\Indimaret\Indimaret.Web\bin\System.Web.Webpages.Razor.dll
+H:\Batch205\Day21\Indimaret\Indimaret.Web\bin\Indimaret.ViewModels.dll
+H:\Batch205\Day21\Indimaret\Indimaret.Web\bin\Indimaret.Models.pdb
+H:\Batch205\Day21\Indimaret\Indimaret.Web\bin\Indimaret.Repositories.pdb
+H:\Batch205\Day21\Indimaret\Indimaret.Web\bin\EntityFramework.xml
+H:\Batch205\Day21\Indimaret\Indimaret.Web\bin\EntityFramework.SqlServer.xml
+H:\Batch205\Day21\Indimaret\Indimaret.Web\bin\Microsoft.AI.DependencyCollector.xml
+H:\Batch205\Day21\Indimaret\Indimaret.Web\bin\Microsoft.AI.ServerTelemetryChannel.xml
+H:\Batch205\Day21\Indimaret\Indimaret.Web\bin\Microsoft.AI.Web.xml
+H:\Batch205\Day21\Indimaret\Indimaret.Web\bin\Microsoft.AI.WindowsServer.xml
+H:\Batch205\Day21\Indimaret\Indimaret.Web\bin\Microsoft.ApplicationInsights.xml
+H:\Batch205\Day21\Indimaret\Indimaret.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+H:\Batch205\Day21\Indimaret\Indimaret.Web\bin\System.Web.Razor.xml
+H:\Batch205\Day21\Indimaret\Indimaret.Web\bin\System.Web.Webpages.xml
+H:\Batch205\Day21\Indimaret\Indimaret.Web\bin\System.Web.Webpages.Deployment.xml
+H:\Batch205\Day21\Indimaret\Indimaret.Web\bin\System.Web.Webpages.Razor.xml
+H:\Batch205\Day21\Indimaret\Indimaret.Web\bin\System.Web.Helpers.xml
+H:\Batch205\Day21\Indimaret\Indimaret.Web\bin\System.Web.Mvc.xml
+H:\Batch205\Day21\Indimaret\Indimaret.Web\bin\Indimaret.ViewModels.pdb
+H:\Batch205\Day21\Indimaret\Indimaret.Web\obj\Debug\Indimaret.Web.csprojResolveAssemblyReference.cache
+H:\Batch205\Day21\Indimaret\Indimaret.Web\obj\Debug\Indimaret.Web.dll
+H:\Batch205\Day21\Indimaret\Indimaret.Web\obj\Debug\Indimaret.Web.pdb
+D:\Batch 205\Indimaret\Indimaret.Web\bin\ApplicationInsights.config
+D:\Batch 205\Indimaret\Indimaret.Web\bin\roslyn\csc.exe
+D:\Batch 205\Indimaret\Indimaret.Web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Batch 205\Indimaret\Indimaret.Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Batch 205\Indimaret\Indimaret.Web\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Batch 205\Indimaret\Indimaret.Web\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Batch 205\Indimaret\Indimaret.Web\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Batch 205\Indimaret\Indimaret.Web\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Batch 205\Indimaret\Indimaret.Web\bin\roslyn\System.Collections.Immutable.dll
+D:\Batch 205\Indimaret\Indimaret.Web\bin\roslyn\System.Reflection.Metadata.dll
+D:\Batch 205\Indimaret\Indimaret.Web\bin\roslyn\vbc.exe
+D:\Batch 205\Indimaret\Indimaret.Web\bin\roslyn\VBCSCompiler.exe
+D:\Batch 205\Indimaret\Indimaret.Web\bin\roslyn\VBCSCompiler.exe.config
+D:\Batch 205\Indimaret\Indimaret.Web\bin\Indimaret.Web.dll.config
+D:\Batch 205\Indimaret\Indimaret.Web\bin\Indimaret.Web.dll
+D:\Batch 205\Indimaret\Indimaret.Web\bin\Indimaret.Web.pdb
+D:\Batch 205\Indimaret\Indimaret.Web\bin\EntityFramework.dll
+D:\Batch 205\Indimaret\Indimaret.Web\bin\EntityFramework.SqlServer.dll
+D:\Batch 205\Indimaret\Indimaret.Web\bin\Indimaret.Models.dll
+D:\Batch 205\Indimaret\Indimaret.Web\bin\Indimaret.Repositories.dll
+D:\Batch 205\Indimaret\Indimaret.Web\bin\Indimaret.ViewModels.dll
+D:\Batch 205\Indimaret\Indimaret.Web\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Batch 205\Indimaret\Indimaret.Web\bin\Microsoft.AI.DependencyCollector.dll
+D:\Batch 205\Indimaret\Indimaret.Web\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Batch 205\Indimaret\Indimaret.Web\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Batch 205\Indimaret\Indimaret.Web\bin\Microsoft.AI.Web.dll
+D:\Batch 205\Indimaret\Indimaret.Web\bin\Microsoft.AI.WindowsServer.dll
+D:\Batch 205\Indimaret\Indimaret.Web\bin\Microsoft.ApplicationInsights.dll
+D:\Batch 205\Indimaret\Indimaret.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Batch 205\Indimaret\Indimaret.Web\bin\Microsoft.Web.Infrastructure.dll
+D:\Batch 205\Indimaret\Indimaret.Web\bin\System.Web.Helpers.dll
+D:\Batch 205\Indimaret\Indimaret.Web\bin\System.Web.Mvc.dll
+D:\Batch 205\Indimaret\Indimaret.Web\bin\System.Web.Razor.dll
+D:\Batch 205\Indimaret\Indimaret.Web\bin\System.Web.Webpages.Deployment.dll
+D:\Batch 205\Indimaret\Indimaret.Web\bin\System.Web.Webpages.dll
+D:\Batch 205\Indimaret\Indimaret.Web\bin\System.Web.Webpages.Razor.dll
+D:\Batch 205\Indimaret\Indimaret.Web\bin\Indimaret.Models.pdb
+D:\Batch 205\Indimaret\Indimaret.Web\bin\Indimaret.Repositories.pdb
+D:\Batch 205\Indimaret\Indimaret.Web\bin\Indimaret.ViewModels.pdb
+D:\Batch 205\Indimaret\Indimaret.Web\bin\EntityFramework.xml
+D:\Batch 205\Indimaret\Indimaret.Web\bin\EntityFramework.SqlServer.xml
+D:\Batch 205\Indimaret\Indimaret.Web\bin\Microsoft.AI.DependencyCollector.xml
+D:\Batch 205\Indimaret\Indimaret.Web\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Batch 205\Indimaret\Indimaret.Web\bin\Microsoft.AI.Web.xml
+D:\Batch 205\Indimaret\Indimaret.Web\bin\Microsoft.AI.WindowsServer.xml
+D:\Batch 205\Indimaret\Indimaret.Web\bin\Microsoft.ApplicationInsights.xml
+D:\Batch 205\Indimaret\Indimaret.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Batch 205\Indimaret\Indimaret.Web\bin\System.Web.Razor.xml
+D:\Batch 205\Indimaret\Indimaret.Web\bin\System.Web.Webpages.xml
+D:\Batch 205\Indimaret\Indimaret.Web\bin\System.Web.Webpages.Deployment.xml
+D:\Batch 205\Indimaret\Indimaret.Web\bin\System.Web.Webpages.Razor.xml
+D:\Batch 205\Indimaret\Indimaret.Web\bin\System.Web.Helpers.xml
+D:\Batch 205\Indimaret\Indimaret.Web\bin\System.Web.Mvc.xml
+D:\Batch 205\Indimaret\Indimaret.Web\obj\Debug\Indimaret.Web.csprojResolveAssemblyReference.cache
+D:\Batch 205\Indimaret\Indimaret.Web\obj\Debug\Indimaret.Web.dll
+D:\Batch 205\Indimaret\Indimaret.Web\obj\Debug\Indimaret.Web.pdb

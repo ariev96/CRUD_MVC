@@ -1,0 +1,262 @@
+﻿<h2>Halaman Transaction</h2>
+<form id="idFormTrxBarang">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="table-responsive">
+                <table class="table">
+                    <tr>
+                        <td>No Faktur</td>
+                        <td><input type="text" class="form-control" id="idInputNoFaktur" name="NoFaktur" /></td>
+                    </tr>
+                    <tr>
+                        <td>Tanggal Transaksi</td>
+                        <td><input type="date" class="form-control" name="TglTransaksi" id="TglTransaksi" disabled/></td>
+                    </tr>
+                    <tr>
+                        <td>Nama Kasir</td>
+                        <td><input type="text" class="form-control" id="idInputNamaKasir" name="NamaKaryawan" /></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <input type="text" class="form-control" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            @*untuk table barang*@
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <td>Nama Barang</td>
+                            <td>Harga</td>
+                            <td>Aksi</td>
+                        </tr>
+                    </thead>
+                    <tbody id="idBodyTableIptTrxBarang"></tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-md-6">
+            Keranjang Barang
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <td>Nama Barang</td>
+                            <td>Jumlah</td>
+                            <td>Sub Total</td>
+                            <td>Aksi</td>
+                        </tr>
+                    </thead>
+                    <tbody id="idBodyTableOutputTrxBarang"></tbody>
+                </table>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table">
+                    <tr>
+                        <td>Total Harga</td>
+                        <td><input type="text" class="form-control" id="idTotalHarga" name="TotalHarga" readonly/></td>
+                    </tr>
+                    <tr>
+                        <td>Total Bayar</td>
+                        <td><input type="text" class="form-control" id="idInputTotalBayar"/></td>
+                    </tr>
+                    <tr>
+                        <td>Kembali</td>
+                        <td><input type="text" class="form-control" name="SisaHarga" id="idSisaHarga" readonly/></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><button type="button" id="idBtnTrxSubmit" class="btn btn-success">Submit</button></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</form>
+
+<script>
+    $(document).ready(function () {
+        //debugger;
+        var vJahit = "";
+        var vJahit2 = "";
+        var vDtBarang;
+        var ctr = 0;
+        var vJmlBarang = 1;
+        var vFlag = 0;
+        var vBolehNambahin = 1;
+        var tampilTotal = 0;
+        var totalBayar = 0;
+        var vSubTotal = 0;
+        var vharga = 0;
+        $.ajax({
+            url: '/Barang/GetAll',
+            type: 'Get',
+            success: function (mdl) {
+                //debugger;
+                $.each(mdl, function (index, data) {
+                    vJahit = vJahit + '<tr> ' +
+                                '<td>' + data.NamaBarang + '</td>' +
+                                '<td>' + data.HargaBarang + '</td>' +
+                                '<td>' +
+                                    '<button type="button" class="btn btn-primary clBtnTrxIptBarang" dtd=' + JSON.stringify(data) + ' >' +
+                                        '<span class="glyphicon glyphicon-plus"></span>' +
+                                    '</button>' +
+                                '</td>' +
+                            '</tr>';
+                });
+                $('#idBodyTableIptTrxBarang').html(vJahit);
+
+                $('.clBtnTrxIptBarang').click(function () {
+                    
+                    vDtBarang = JSON.parse($(this).attr('dtd'));
+
+                    if ($('#idBodyTableOutputTrxBarang tr').length == 0) {
+                        vBolehNambahin = 1;
+                    } else {
+                        $('.clOutputNamaBarang').each(function (variable1BerupaIndex, variable2BerupaData) {
+                            if (vDtBarang.ID == parseInt($(this).attr('dtid'))) {
+                                vFlag = 1;
+                                vJmlBarang = $(this).parent().parent().find('td input:text.clOutputJmlBarang').val();
+
+                                vJmlBarang++;
+                                $(this).parent().parent().find('td input:text.clOutputJmlBarang').val(vJmlBarang);
+                                $(this).parent().parent().find('td input:text.clOutputSubtotalBarang').val(vDtBarang.HargaBarang * vJmlBarang);
+                             
+                                vSubTotal = vSubTotal + vDtBarang.HargaBarang;
+                                //debugger;
+                               
+
+                            } else {
+                                vBolehNambahin = 1;
+                            }
+                        });
+                    }
+
+                    //jika belum ada di tabel boleh nambah baris
+                    if (vBolehNambahin == 1 && vFlag == 0) {
+                        vJmlBarang = 1;
+                        vharga = vJmlBarang * vDtBarang.HargaBarang;
+                       
+                        vJahit2 = '<tr dtHarga="'+ vharga +'"> ' +
+                                '<td>' +
+                                    '<input type="text" name="trxDetail[0].KodeBarang" value="' + vDtBarang.ID + '" style="border:0" />' +
+                                    '<input type="text" dtID="' + vDtBarang.ID + '" value="' + vDtBarang.NamaBarang + '" class="clOutputNamaBarang" style="border:0" />' +
+                                '</td>' +
+                                '<td>' +
+                                    '<input type="text" name="trxDetail[0].JumlahBarang" value="' + vJmlBarang + '" class="clOutputJmlBarang" style="border:0" />' +
+                                '</td>' +
+                                '<td>' +
+                                    '<input type="text" value="' + (vharga) + '" class="clOutputSubtotalBarang" style="border:0" />' +
+
+                                '</td>' +
+                                '<td>' +
+                                    '<button type="button" class="btn btn-danger clBtnTrxOutputBarang"  dataHarga="'+ vharga+'">' +
+                                        '<span class="glyphicon glyphicon-minus"></span>' +
+                                    '</button>' +
+                                '</td>' +
+                            '</tr>';
+
+                        //diakhir perintah flagging harus d reset
+                        vBolehNambahin = 0;
+                        vSubTotal = vSubTotal + vharga;
+
+                        $('#idBodyTableOutputTrxBarang').append(vJahit2);
+                        reIndexTable();
+                        
+                    }
+
+                    
+
+                   
+                    vFlag = 0;
+                    //---End script total harga---
+                    $('#idTotalHarga').val(vSubTotal);
+                    reCalculateTotal();
+
+                    $('.clBtnTrxOutputBarang').click(function () {
+                        $(this).parent().parent().remove();
+                        reIndexTable();
+                        reCalculateTotal();
+                        //vSubTotal = vSubTotal - vharga;
+                        //$('#idTotalHarga').val(vSubTotal);
+                        //debugger;
+                    });
+                  
+                    //recalculate
+                    function reCalculateTotal() {
+                        var vTotal = 0;
+                        if ($('#idBodyTableOutputTrxBarang tr').length > 0) {
+                            $('.clOutputSubtotalBarang').each(function (index, data) {
+                                vTotal = vTotal + parseInt($(this).val());
+                                //vTotal = 0;
+
+                            })
+                        } else {
+                            vTotal = 0;
+                        }
+                        $('#idTotalHarga').val(vTotal);
+                    }
+
+                    //reindexID
+                    function reIndexTable() {
+                        var rowCount = $('#idBodyTableOutputTrxBarang tr').length;
+                        //alert(rowCount);
+                        if (rowCount > 0) {
+                            var idx = 0;
+                            var idj = 0;
+                            $.each($("#idBodyTableOutputTrxBarang").find("tr"), function (i, val) {
+                                //alert(idx);
+                                var varKdBarang = $(this).find(":input[name*='.KodeBarang']");
+                                $(varKdBarang).attr("name", varKdBarang.attr("name").replace(/\[.*?]\s?/g, "[" + idx + "]"));
+                                idx += 1;
+
+                                var varJumlahBarang = $(this).find(":input[name*='.JumlahBarang']");
+                                $(varJumlahBarang).attr("name", varJumlahBarang.attr("name").replace(/\[.*?]\s?/g, "[" + idj + "]"));
+                                idj += 1;
+                            });
+                        }
+                    }
+
+                });
+
+                $('#idInputTotalBayar').keyup(function () {
+                    var getTotalBayar = parseInt($('#idInputTotalBayar').val());
+                    var getTotalHarga = parseInt($('#idTotalHarga').val());
+                    var getHasil = getTotalBayar - getTotalHarga;
+                    var hasil = $('#idSisaHarga').val(getHasil);
+                    debugger;
+
+                })
+            }
+        });
+        $('#idBtnTrxSubmit').click(function () {
+            var vDataTransaksi = $('#idFormTrxBarang').serialize();
+            $.ajax({
+                url: '/Transaksi/SaveTransaksi',
+                type: 'Post',
+                data: vDataTransaksi,
+                success: function (mdl) {
+                    if (mdl.success = "berhasil") {
+                        alert("Data berhasil masuk");
+                    }
+                }
+
+            });
+            //document.getElementById("idInputNoFaktur").value = "";
+            //document.getElementById("idInputNamaKasir").value = "";
+
+           
+        });
+
+        //Tanggal NOW
+        var now = new Date();
+        var day = ("0" + now.getDate()).slice(-2);
+        var month = ("0" + (now.getMonth() + 1)).slice(-2);
+        var today = now.getFullYear() + "-" + (month) + "-" + (day);
+        $('#TglTransaksi').val(today);
+    });
+</script>

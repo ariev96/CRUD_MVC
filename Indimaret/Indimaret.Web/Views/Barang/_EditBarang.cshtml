@@ -1,0 +1,76 @@
+﻿
+<h2>Edit Barang</h2>
+
+<form id="idFormEditBarang">
+    <div class="table-responsive">
+        <table class="table">
+            <tr>
+               
+                <input id="ID" name="ID" hidden/>
+            </tr>
+            <tr>
+               <td>Kode Barang</td>
+                <td><input id="idEditKodeBarang" class="form-control" name="KodeBarang" type="text" readonly/></td>
+            </tr>
+            <tr>
+                <td>Nama Barang</td>
+                <td><input id="idEditNamaBarang" name="NamaBarang" /></td>
+            </tr>
+            <tr>
+                <td>Asal Pabrik</td>
+                <td><input id="idEditAsalPabrik" name="AsalPabrik" /></td>
+            </tr>
+            <tr>
+                <td>Jumlah Barang</td>
+                <td><input id="idEditJumlahBarang" name="JumlahBarang" /></td>
+            </tr>
+            <tr>
+                <td>Harga Barang</td>
+                <td><input id="idEditHargaBarang" name="HargaBarang" /></td>
+            </tr>
+            <tr>
+                <td>Is Delete?</td>
+                <td><input  id="idEditIsDelete" type="radio" name="IsDelete" value="false" /> Tidak <input type="radio" name="readyOrNot" value="true" /> Ya </td>
+            </tr>
+            <tr>
+                <td>Created By</td>
+                <td><input  type="text" name="CreatedBy" id="idEditCreatedBy" class="form-control" readonly/></td>
+            </tr>
+            <tr>
+                <td>Tanggal Di Terima</td>
+                <td><input  type="text" name="CreatedDate" id="idEditCreatedDate" class="form-control" readonly/></td>
+            </tr>
+            <tr>
+                <td>Di Update Oleh</td>
+                <td><input  type="text" name="UpdatedBy" id="idEditUpdateBy" /></td>
+            </tr>
+            <tr>
+                @*<td>Tanggal Update</td>*@
+                <input  type="date" name="UpdatedDate" id="idEditUpdateDate" hidden/>
+            </tr>
+
+        </table>
+    </div>
+
+    <button type="button" class="btn btn-success btn-default btn-lg" id="idBtnSubmitEditBarang">Save</button>
+</form>
+<script>
+    $('#idBtnSubmitEditBarang').click(function () {
+        debugger;
+        var vDataEditBarang = $('#idFormEditBarang').serialize();
+        $.ajax({
+            url:'/Barang/SaveEditBarang',
+            data:vDataEditBarang,
+            type:'post',
+            success: function (terserah) {
+                if (terserah.status == "Berhasil") {
+                    alert("data berhasil");
+                }
+                else {
+                    alert("data gagal");
+                }
+            }
+        });
+
+    });
+</script>

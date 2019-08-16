@@ -1,0 +1,73 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<table width="1000px">
+    <tr>
+
+        <td>
+
+
+            <div>
+                <button id="idBtnAddBarang" type="button" class="btn btn-primary">
+                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                    Add New
+                </button>
+            </div>
+        </td>
+        <td align="right">
+            <div>
+                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                <input type="text" placeholder="Search...">
+                
+               
+            </div>
+        </td>
+    </tr>
+</table>
+<br />
+<div id="idListBarang">
+    </div>
+
+<!--Modal-->
+<div id="IdMdlBarang" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+            <div id="IdMdlBodyBarang" class="modal-body">
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+<script>
+    $(document).ready(function () {
+        //debugger;
+        $.ajax({
+            url: '/Barang/ListBarang',
+            method: 'Get',
+            success: function (mdl) {
+                $('#idListBarang').html(mdl);
+            }
+        });
+        //button add
+        $('#idBtnAddBarang').click(function () {
+            $.ajax({
+                url: '/Barang/AddBarang',
+                method: 'Get',
+                success: function (mdl) {
+                    $('#IdMdlBodyBarang').html(mdl);
+                }
+            });
+            $('#IdMdlBarang').modal('show');
+
+        });
+       
+
+    });
+
+</script>
+

@@ -1,0 +1,74 @@
+﻿<div class="">
+    <form id="idFormAddBarang">
+        <table class="table table-responsive">
+            <tr>
+                <td>KodeBarang</td>
+                <td><input required  type="text" name="KodeBarang" id="idInputKodeBarang" /></td>
+            </tr>
+            <tr>
+                <td>NamaBarang</td>
+                <td><input required  type="text" name="NamaBarang" id="idInputNamaBarang"/></td>
+            </tr>
+            <tr>
+                <td>Asal Pabrik</td>
+                <td><input required  type="text" name="AsalPabrik" id="idInputAsalPabrik"/></td>
+            </tr>
+            <tr>
+                <td>Jumlah Barang</td>
+                <td><input required  type="text" name="JumlahBarang" id="idInputJumlahBarang"/></td>
+            </tr>
+            <tr>
+                <td>Harga Barang</td>
+                <td><input required  type="number" name="HargaBarang" id="idInputHargaBarang"/></td>
+            </tr>
+            <tr>
+                <td>Is Delete?</td>
+                <td><input required id="idInputIsDelete" type="radio" name="IsDelete" value="false" /> Tidak <input type="radio" name="IsDelete" value="true" /> Ya </td>
+            </tr>
+            <tr>
+                <td>Created By</td>
+                <td><input required  type="text" name="CreatedBy" id="idInputCreatedBy"/></td>
+            </tr>
+            <tr>
+                <td>Tanggal Di Terima</td>
+                <td><input required  type="date" name="CreatedDate" id="idInputCreatedDate"/></td>
+            </tr>
+            <tr>
+                <td>Di Update Oleh</td>
+                <td><input required  type="text" name="UpdatedBy" id="idInputUpdateBy"/></td>
+            </tr>
+            <tr>
+                <td>Tanggal Update</td>
+                <td><input required  type="date" name="UpdatedDate" id="idInputUpdateDate"/></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" class="btn btn-success" id="idBtnSubmitAddBarang"></input>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+<script>
+    $('#idFormAddBarang').submit(function () {
+        //debugger;
+        var vDataAddBarang = $('#idFormAddBarang').serialize();
+        //debugger;
+        //kirim data menggunakan ajax
+        $.ajax({
+            url: '/Barang/SaveBarang',
+            data: vDataAddBarang,
+            type: 'post',
+            success: function (paijo) {
+                //debugger;
+                if (paijo.status=="Berhasil") {
+                    alert("data berhasil");
+                }
+                else {
+                    alert("data gagal");
+                }
+            }
+        });
+    });
+</script>
